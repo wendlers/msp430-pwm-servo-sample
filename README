@@ -1,0 +1,36 @@
+Running MSP430G2xx3 PWM example  
+sw@kaltpost.de
+http://gpio.kaltpost.de/
+
+
+Introduction
+------------
+
+This example shows how to use TIMER_A0+A1 PWM with a MSP430G2xx3 MCU. It controls two servos on P1.6 and P2.2. 
+
+
+Hardware Setup
+--------------
+
+Connect signal pins of servos to P1.6 and P2.2. Also connect GND of Launchpad to GND for servors. Supply ~5V to servos from seperate power source (do NOT power from Launchpad!). 
+
+
+Compilation
+------------
+
+This project is written for msp430-gcc on Linux (I used v4.5.3 which is available as package on ubuntu). For flashing the "mspdebug" tool was used (also from the Ubuntu package).
+
+To compile the source just issue a:
+
+make -C src
+
+This builds the firmware in the "src" subdirectory.
+
+
+Flashing
+------------
+
+To flash the firmware to your Launchpad you could use the "flash" make target:
+
+make -C src flash
+
